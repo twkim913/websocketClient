@@ -1,0 +1,27 @@
+{
+  "name": "websocketclient",
+  "version": "1.0.0",
+  "main": "dist/app.js",
+  "author": "taewoo kim",
+  "license": "MIT",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=default NODE_PATH=src ts-node-dev  --respawn --transpileOnly ./src/app.ts",
+    "build": "yarn clean && tsc --pretty",
+    "clean": "rimraf ./dist/**/*"
+  },
+  "dependencies": {
+    "@types/node": "^13.1.8",
+    "@types/socket.io-client": "^1.4.32",
+    "http": "^0.0.0",
+    "socket.io": "^2.3.0",
+    "socket.io-client": "^2.3.0",
+    "uuid": "^7.0.2"
+  },
+  "devDependencies": {
+    "@types/uuid": "^7.0.2",
+    "cross-env": "^6.0.3",
+    "ts-node-dev": "^1.0.0-pre.44",
+    "tslint": "^6.0.0",
+    "typescript": "^3.7.5"
+  }
+}
